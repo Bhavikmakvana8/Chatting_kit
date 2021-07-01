@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Chatting Kit</string>
+
+    <style name="splash" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <style name="nav_color">
+        <item name="colorPrimary">#000</item>
+
+        <item name="colorControlHighlight">#A39D9D</item>
+
+
+    </style>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Chat_main"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#efeeee"
+        android:theme="@style/nav_color"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer_menu"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2B333C"
+        android:orientation="vertical">
+        //app_title
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_call">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:title="        Chatting_Kit"
+                app:titleTextColor="@color/black"
+                android:layout_centerHorizontal="true" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+
+            //Drawer_Icon
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="34dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/menu_icon"
+                tools:ignore="ContentDescription" />
+
+
+            //bottom_navigation
+            <com.ismaeldivita.chipnavigation.ChipNavigationBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#2B333C"
+                android:elevation="80dp"
+                android:padding="8dp"
+                app:cnb_menuResource="@menu/bottom_navigation"
+                app:cnb_unselectedColor="@color/white"
+                app:cnb_radius="8dp"
+                android:layout_margin="30dp"
+                app:cnb_orientationMode="horizontal" />
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+
+
+
+
+
+
