@@ -3,19 +3,14 @@
     android:height="24dp"
     android:shape="rectangle">
 
-  <solid
-      android:color="#ff785b"
-      />
-  <size
-    android:height="9dp"
-      android:width="20dp"/>
-  <corners
+    <solid android:color="#ff785b" />
+    <size
+        android:width="30dp"
+        android:height="8dp" />
+    <corners
+        android:bottomLeftRadius="10dp"
+        android:bottomRightRadius="10dp" />
 
-    android:topRightRadius="30dp"
-      android:bottomRightRadius="30dp"
-      />
-
-
-  </shape>
+</shape>
 
 

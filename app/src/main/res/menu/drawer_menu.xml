@@ -5,10 +5,20 @@
         android:title="Moments"
         android:icon="@drawable/ic_status"/>
 
-
     <item
         android:id="@+id/Calls"
         android:title="Calls"
-        android:icon="@drawable/call"
-        />
+        android:icon="@drawable/call" />
+
+    <item
+        android:id="@+id/Contact"
+        android:title="Select Contact"
+        android:icon="@drawable/ic_chats" />
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/drawerbottom"/>
 </menu>

@@ -5,6 +5,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -12,7 +13,6 @@ import android.widget.ImageView;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -23,22 +23,11 @@ public class MainActivity extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
         imageView.startAnimation(animation);
 
-        Thread timer = new Thread() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                try {
-                    sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(), Chat_main.class);
-                    startActivity(intent);
-                    finish();
-                    super.run();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                startActivity(new Intent(MainActivity.this, Chat_main.class));
             }
-        };
-        timer.start();
-
-
+        },3000);
     }
 }
